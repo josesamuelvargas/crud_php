@@ -1,6 +1,6 @@
 <?php
 
-if (isset($_POST['insertar.php'])) {
+if (isset($_POST['insertar'])) {
     echo 'guardando';
 }
 
