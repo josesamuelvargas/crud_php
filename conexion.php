@@ -1,13 +1,14 @@
 <?php
 $con = mysqli_connect(
-    'localhost',
-    'root',
-    '',
-    'crud_php'
+    'localhost', //ubicación de la BD
+    'root', //usuario de la BD
+    '', //contraseña de la BD
+    'crud_php' //nombre de la BD creada en phpmyadmin
 );
 
+//prueba de funcionamiento de la BD
 /*if(isset($con)){
-    echo 'la conexión de la bd está activa';
+    echo 'la conexión de la bd está funcionando';
 }*/
 
 ?>
