@@ -1,15 +1,13 @@
 <?php
-function conectar(){
-    $host="localhost";
-    $user="root";
-    $pass="";
+$con = mysqli_connect(
+    'localhost',
+    'root',
+    '',
+    'crud_php'
+);
 
-    $bd="alumno";
+/*if(isset($con)){
+    echo 'la conexión de la bd está activa';
+}*/
 
-    $con=mysqli_connect($host,$user,$pass);
-
-    mysqli_select_db($con,$bd);
-
-    return $con;
-}
 ?>
