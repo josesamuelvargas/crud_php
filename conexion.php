@@ -1,5 +1,5 @@
 <?php
-$con = mysqli_connect(
+$conn = mysqli_connect(
     'localhost', //ubicación de la BD
     'root', //usuario de la BD
     '', //contraseña de la BD
