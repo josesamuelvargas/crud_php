@@ -19,7 +19,7 @@
                     <div class="form-group p-2">
                         <textarea name="descripcion" rows="2" class="form-control" placeholder="Descripción"></textarea>
                     </div>
-                    <input type="submit" class="btn btn-success btn-block" name="guardar_estudiante" value="Guardar">
+                    <input type="submit" class="btn btn-success btn-block" name="insertar" value="Guardar">
                 </form>
             </div>
         </div>
