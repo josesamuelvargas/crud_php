@@ -1,4 +1,5 @@
 <?php include("conexion.php") ?>
+
 <?php include("includes/header.php") ?>
 
 <div class="container">
@@ -8,7 +9,7 @@
         <div class="col-md-4">
 
             <div class="card card-body"> <!-- tarjeta -->
-                <form action="">
+                <form action="insertar.php" method="POST">
                     <div class="form-group">
                         <input type="text" name="nombres" class="form-control" placeholder="Nombres Estudiante" autofocus>
                     </div>
