@@ -5,6 +5,14 @@
 <main class="container p-4">    
     <div class="row">        
         <div class="col-md-4">
+
+            <?php if (isset($_SESSION['message'])) { ?> <!--inicio de alerta traida desde bootstrap-->
+                <div class="alert alert-<?= $_SESSION['message_type']?> alert-dismissible fade show" role="alert"> <!--mensaje de alerta viene de insertar.php línea 18 (se puede reemplazar el warning por  < ? = /*$SESSION['message_type']*/ ? > -->
+                    <?= $_SESSION['message']?>  <!--mensaje viene de insertar.php línea 17-->
+                    <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+                </div>
+            <?php session_unset(); }  ?> <!--fin de la alerta traida desde bootstrap /// session_unset es para limpiar la pantalla de los datos almacenados sesión-->
+
             <div class="card card-body"> <!-- tarjeta -->
                 <form action="insertar.php" method="POST">
                     <div class="form-group p-2">
