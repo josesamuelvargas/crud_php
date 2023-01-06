@@ -5,7 +5,7 @@
         $id = $_GET['id'];
         $query = "DELETE FROM estudiantes WHERE id=$id";
         $result = mysqli_query($conn, $query);
-        if(mysqli_num_rows($result)) {
+        if(mysqli_num_rows($result) == 1) {
             $row = mysqli_fetch_array($result);
             $nombres = $row['nombres'];
             $apellidos = $row['apellidos'];
@@ -34,6 +34,9 @@
                     <div class="form-group">
                         <textarea name="descripcion" rows="2" class="form-control" placeholder="Actualiza la descripción"><?php echo $descripcion ?></textarea>
                     </div>
+                    <button class="btn-success" name="actualizar">
+                        Actualizar
+                    </button>
                 </form>
             </div>
         </div>
