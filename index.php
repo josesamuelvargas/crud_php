@@ -35,16 +35,38 @@
             <table class="table table-bordered">
                 <thead>
                     <tr>
-                        <th>Nombres<th>
-                        <th>Apellidos<th>
-                        <th>Edad<th>
-                        <th>Descripción<th>
-                        <th>Fecha registro<th>
-                        <th>Acciones<th>
+                        <th>nombres</th>
+                        <th>apellidos</th>
+                        <th>edad</th>
+                        <th>descripción</th>
+                        <th>fecha_creacion</th>
+                        <th>acciones</th>
                     </tr> <!-- end tr -->                   
                 </thead> <!-- end thead -->
                 <tbody> 
-                    
+                    <?php
+                        $query = "SELECT * FROM estudiantes";
+                        $resultado_est = mysqli_query($conn, $query);
+
+                        while($row = mysqli_fetch_array($resultado_est)) {
+                    ?>
+                            <tr>
+                                <td><?php echo $row['nombres'] ?></td>
+                                <td><?php echo $row['apellidos'] ?></td>
+                                <td><?php echo $row['edad'] ?></td>
+                                <td><?php echo $row['descripcion'] ?></td>
+                                <td><?php echo $row['fecha_creacion'] ?></td>
+                                <td>
+                                    <a href="editar.php?id=<?php echo $row['id']?>">
+                                        Editar
+                                    </a>
+                                    <a href="eliminar.php?id=<?php echo $row['id']?>">
+                                        Borrar
+                                    </a>
+                                    
+                                </td>
+                            </tr>
+                    <?php } ?>
                 </tbody> <!-- end tbody -->
             </table>  <!-- end table -->          
         </div> <!-- end div -->
