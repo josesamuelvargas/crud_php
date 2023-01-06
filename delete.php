@@ -5,7 +5,7 @@
         $id = $_GET['id'];
         $query = "DELETE FROM estudiantes WHERE id = $id";
         $result = mysqli_query($conn, $query);
-        if($result) {
+        if(!$result) {
             die("La consulta falló");
         }
 
