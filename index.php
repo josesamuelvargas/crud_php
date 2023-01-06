@@ -57,11 +57,11 @@
                                 <td><?php echo $row['descripcion'] ?></td>
                                 <td><?php echo $row['fecha_creacion'] ?></td>
                                 <td>
-                                    <a href="editar.php?id=<?php echo $row['id']?>">
-                                        Editar
+                                    <a href="editar.php?id=<?php echo $row['id']?>" class="btn btn-secondary">                                        
+                                        <i class="fa-solid fa-pencil"></i>
                                     </a>
-                                    <a href="eliminar.php?id=<?php echo $row['id']?>">
-                                        Borrar
+                                    <a href="eliminar.php?id=<?php echo $row['id']?>" class="btn btn-danger">                                        
+                                        <i class="fa-solid fa-trash"></i>
                                     </a>
                                     
                                 </td>
